@@ -1,12 +1,10 @@
 /* Navbar Styles */
 nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
   height: 200px;
   background: linear-gradient(
     to bottom,
@@ -17,17 +15,19 @@ nav {
   color: #fff;
   padding: 10px 20px;
   z-index: 1000;
+  width: 100%;
 }
 
 .logo img {
   max-width: 80px;
   height: auto;
   margin-left: 20px;
+  margin-right: 50px;
 }
 
 .nav-links {
   font-family: roboto;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 700;
   list-style: none;
   display: flex;
@@ -36,7 +36,7 @@ nav {
 }
 
 .nav-links li {
-  font-size: 28px;
+  font-size: 24px;
 }
 
 .nav-links a {

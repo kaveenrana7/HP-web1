@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="label">
       <div className="page-image">
-        <img src="home-image.png" alt="Page Image" />
+        <img src="home-image.png" alt="PageImage" />
       </div>
       <div className="text-wrapper">YOUR LINK TO</div>
       <div className="text-wrapper2">EXPERT SOLUTION</div>
