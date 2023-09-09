@@ -1,15 +1,26 @@
 import "./App.css";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
-import Navbar from "./components/Navbar/Navbar";
+import Dashboard from "./components/Dashboard/Dashboard";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import ContactUs from "./components/ContactUs/ContactUs";
+import ServiceProvider from "./components/Dashboard/ServiceProvider";
+import About from "./components/About/About";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Home />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route exact path="/dashboard" element={<Dashboard />} />
+          <Route exact path="/serviceprovider" element={<ServiceProvider />} />
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/about" element={<About />} />
+          <Route exact path="/contactus" element={<ContactUs />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
