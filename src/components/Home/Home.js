@@ -1,10 +1,11 @@
 import React from "react";
 import "./index.css";
-import "./home-image.png";
+import Navbar from "../Navbar/Navbar";
 
 const Home = () => {
   return (
     <div className="label">
+      <Navbar home="active" />
       <div className="page-image">
         <img src="home-image.png" alt="PageImage" />
       </div>
