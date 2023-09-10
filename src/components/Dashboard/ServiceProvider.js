@@ -1,10 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./index.css";
 import Card2 from "./Card-2";
 import DashNavbar from "./DashNavbar";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  TextField,
+  Checkbox,
+} from "@mui/material";
 
 const ServiceProvider = () => {
+  // Define state to store service provider data
+  const [serviceProviders, setServiceProviders] = useState([
+    {
+      name: "Yohan Buddhika",
+      category: "Plumbing",
+      available: true,
+    },
+    {
+      name: "Senuri Wickramasinghe",
+      category: "Gardening",
+      available: false,
+    },
+    {
+      name: "Michelle Fernando",
+      category: "Cleaning",
+      available: false,
+    },
+    {
+      name: "Kushantha Alwis",
+      category: "Plumbing",
+      available: false,
+    },
+    {
+      name: "Avishka Fernando",
+      category: "Lawn Mowing",
+      available: false,
+    },
+  ]);
+
+  // Function to handle changes in the "available" status
+  const handleAvailabilityChange = (index) => {
+    const updatedServiceProviders = [...serviceProviders];
+    updatedServiceProviders[index].available =
+      !updatedServiceProviders[index].available;
+    setServiceProviders(updatedServiceProviders);
+  };
+
   return (
     <div className="dashboard">
       <div className="slideBar">
@@ -45,7 +92,7 @@ const ServiceProvider = () => {
                 <img src="dashboard--icon4.png" alt="icon" />
               </ld>
             </ld>
-            <ld>Calender</ld>
+            <ld>Calendar</ld>
           </li>
         </ul>
       </div>
@@ -64,8 +111,55 @@ const ServiceProvider = () => {
         <Card2 heading="Customer" active="card-2" />
         <Card2 heading="Category" active="card-2" />
       </div>
-
-      <div className="stat"></div>
+      <div className="service-table">
+        <TableContainer>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell>Name</TableCell>
+                <TableCell>Category</TableCell>
+                <TableCell>Available</TableCell>
+                <TableCell>On/Off</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {serviceProviders.map((serviceProvider, index) => (
+                <TableRow key={index}>
+                  <TableCell>
+                    <TextField
+                      value={serviceProvider.name}
+                      variant="outlined"
+                      fullWidth
+                      InputProps={{
+                        readOnly: true,
+                      }}
+                    />
+                  </TableCell>
+                  <TableCell>
+                    <TextField
+                      value={serviceProvider.category}
+                      variant="outlined"
+                      fullWidth
+                      InputProps={{
+                        readOnly: true,
+                      }}
+                    />
+                  </TableCell>
+                  <TableCell>
+                    {serviceProvider.available ? "Yes" : "No"}
+                  </TableCell>
+                  <TableCell>
+                    <Checkbox
+                      checked={serviceProvider.available}
+                      onChange={() => handleAvailabilityChange(index)}
+                    />
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </div>
     </div>
   );
 };

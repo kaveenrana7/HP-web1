@@ -12,7 +12,7 @@
 .slideBar {
   top: -30px;
   width: 21%;
-  position: fixed;
+  position: absolute;
   background-color: white;
   height: 130%;
 }
@@ -272,4 +272,9 @@ ld img {
   font-size: 13px;
   color: #777980;
   margin-top: 2px;
+}
+
+.service-table {
+  margin: 50px 0 0 420px;
+  width: 1115px;
 }

@@ -5,7 +5,7 @@ import Navbar from "../Navbar/Navbar";
 const Home = () => {
   return (
     <div className="label">
-      <Navbar home="active" />
+      <Navbar home="active" back_page="text-wrappr-home" />
       <div className="page-image">
         <img src="home-image.png" alt="PageImage" />
       </div>
