@@ -2,16 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./index.css";
 
-const Navbar = ({ home, category, contact, about }) => {
+const Navbar = ({ home, category, contact, about, back_page }) => {
   return (
     <div>
       <div className="labl">
-        <div className="text-wrappr-back">HIREPRO</div>
+        <div className={back_page}>HIREPRO</div>
       </div>
       <nav>
-        <div className="logo">
-          <img src="logo.png" alt="Logo" />
-        </div>
+        <Link to="/">
+          <div className="logo">
+            <img src="logo.png" alt="Logo" />
+          </div>
+        </Link>
         <ul className="nav-links">
           <li>
             <Link to="/">Home</Link>

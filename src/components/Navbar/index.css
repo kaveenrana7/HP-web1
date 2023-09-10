@@ -73,7 +73,7 @@ nav {
   position: fixed;
 }
 
-.labl .text-wrappr-back {
+.labl .text-wrappr-home {
   -webkit-text-stroke: 2px #00000066;
   color: transparent;
   font-family: "Staatliches-Regular", Helvetica;
@@ -84,6 +84,38 @@ nav {
   line-height: 152.3px;
   position: absolute;
   top: -100px;
+  transform: rotate(89.43deg);
+  opacity: 0.3;
+  width: 1318px;
+}
+
+.labl .text-wrappr-about {
+  -webkit-text-stroke: 2px #00000066;
+  color: transparent;
+  font-family: "Staatliches-Regular", Helvetica;
+  font-size: 160px;
+  font-weight: 800;
+  left: -740px;
+  letter-spacing: 0;
+  line-height: 152.3px;
+  position: absolute;
+  top: 500px;
+  transform: rotate(89.43deg);
+  opacity: 0.3;
+  width: 1318px;
+}
+
+.labl .text-wrappr-contact {
+  -webkit-text-stroke: 2px #00000066;
+  color: transparent;
+  font-family: "Staatliches-Regular", Helvetica;
+  font-size: 160px;
+  font-weight: 800;
+  left: -940px;
+  letter-spacing: 0;
+  line-height: 152.3px;
+  position: absolute;
+  top: 150px;
   transform: rotate(89.43deg);
   opacity: 0.3;
   width: 1318px;

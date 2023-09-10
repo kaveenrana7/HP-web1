@@ -5,7 +5,7 @@ import Navbar from "../Navbar/Navbar";
 const ContactUs = () => {
   return (
     <Container>
-      <Navbar contact="active" />
+      <Navbar contact="active" back_page="text-wrappr-contact" />
       <Text align="center" size="xl" style={{ marginTop: 300 }}>
         Contact Us
       </Text>

@@ -5,7 +5,7 @@ import Navbar from "../Navbar/Navbar";
 const About = () => {
   return (
     <div className="about-label">
-      <Navbar about="active" />
+      <Navbar about="active" back_page="text-wrappr-about" />
       <div className="about-page-image">
         <img src="about-image.png" alt="PageImage" />
       </div>
