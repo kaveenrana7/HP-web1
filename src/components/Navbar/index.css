@@ -3,7 +3,7 @@ nav {
   display: flex;
   align-items: center;
   position: fixed;
-  top: 0;
+  top: -30px;
   left: 0;
   height: 200px;
   background: linear-gradient(
@@ -46,7 +46,7 @@ nav {
 }
 
 .nav-links a:hover {
-  color: #00bcd4;
+  color: #d49f00;
 }
 
 /* Search Styles */
